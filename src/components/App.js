@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router';
+import Navlink from './Navlink';
 
 class App extends Component {
   render() {
@@ -8,10 +8,10 @@ class App extends Component {
         <header>
           <span className="icn-logo"><i className="material-icons">code</i></span>
           <ul className="main-nav">
-            <li><Link to="/">Home</Link></li>
-            <li><Link to="/about">About</Link></li>
-            <li><Link to="/teachers">Teachers</Link></li>
-            <li><Link to="/courses">Courses</Link></li>
+            <li><Navlink to="/">Home</Navlink></li>
+            <li><Navlink to="/about">About</Navlink></li>
+            <li><Navlink to="/teachers">Teachers</Navlink></li>
+            <li><Navlink to="/courses">Courses</Navlink></li>
           </ul>
         </header>
         { this.props.children }
