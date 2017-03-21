@@ -1,22 +1,23 @@
 import React from 'react';
-import TeacherList from '../data/teachers';
+import TeachersList from '../data/teachers';
 
 const Teachers = () => {
-  let teachers = TeacherList.map((teacher) => {
+  let teachers = Object.keys(TeachersList).map(key => {
+    let teacher = TeachersList[key];
     return (
       <li className="teacher" key={teacher.id} >
         <img className="teacher-img" src={teacher.img_src} />
-        <h3>{teacher.name}</h3>
+        <h3>{name}</h3>
         <p>{teacher.bio}</p>
       </li>
     );
-  }); 
-  
+  });
+
   return (
     <div className="main-content">
       <h2>Teachers</h2>
       <ul className="group">
-        {teachers}    
+        {teachers}
       </ul>
     </div>
   );
